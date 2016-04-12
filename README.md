@@ -8,13 +8,13 @@ https://github.com/vigour-io/processes-and-culture/blob/master/shipping/packages
 
 ## Input
 
-### Consists of
+#### Consists of
 
 1. pointer to build assets (source files)
 2. custom files and modifications to existing files
 3. pointer to output location
 
-### Is provided by
+#### Is provided by
 In overruling order (1 overruled by 2 etc):
 
 1. `Platform plugin` (e.g. ChromeCast)
