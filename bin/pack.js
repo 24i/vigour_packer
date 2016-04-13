@@ -2,6 +2,7 @@
 'use strict'
 
 let Config = require('vigour-config')
+let path = require('path')
 let Pack = require('../lib')
 let argumentData = []
 // 1st = Platform
@@ -14,7 +15,19 @@ process.argv.forEach(function (val, index, array) {
 })
 
 let config = new Config()
-let pack = Pack()
 
-console.log(argumentData)
-pack.run(argumentData)
+
+let Platform = argumentData[0]
+
+
+// let defaultOutputPath = path.join(process.cwd(), 'packedFake')
+let data = {
+	packer: {
+    "chromecast" : {
+      "receiver.js": "platform/chromecast/receiver.js"
+    }
+  }
+}
+
+let pack = Pack(data,Platform)
+pack.run()
