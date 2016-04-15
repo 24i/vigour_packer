@@ -4,23 +4,23 @@
 let Config = require('vigour-config')
 let path = require('path')
 let Pack = require('../lib')
-let argumentData = []
+let supportedPlatforms = {
+	chromecast:'tv',
+	webostv:'tv',
+	web:'main'
+}
+let config = new Config()
+
+let commandLineArgs = []
+
 // 1st = Platform
 // 2nd = EntryPoint folder
 // 3rd = Output folder
-process.argv.forEach(function (val, index, array) {
-	if(index > 2) {
-		argumentData.push(val)
-	}
-})
 
-let config = new Config()
+commandLineArgs.push(supportedPlatforms[process.argv[3]], process.argv[3])
 
 
-let Platform = argumentData[0]
-
-
-// let defaultOutputPath = path.join(process.cwd(), 'packedFake')
+let defaultOutputPath = path.join(process.cwd(), 'packedFake')
 let data = {
 	packer: {
     "chromecast" : {
@@ -29,5 +29,7 @@ let data = {
   }
 }
 
-let pack = Pack(data,Platform)
+console.log(data, commandLineArgs)
+
+let pack = Pack(data, commandLineArgs)
 pack.run()
