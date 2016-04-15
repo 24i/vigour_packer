@@ -22,6 +22,8 @@ commandLineArgs.push(supportedPlatforms[process.argv[2]], process.argv[2])
 
 let defaultOutputPath = path.join(process.cwd(), 'fakeFolder')
 let defaultInputPath = path.join(process.cwd(), 'differentEntry')
+
+
 let data = {
 	packer: {
     "chromecast" : {
