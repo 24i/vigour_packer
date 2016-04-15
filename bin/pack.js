@@ -27,6 +27,7 @@ let data = {
       "receiver.js": "platform/chromecast/receiver.js"
     }
   }
+
 }
 
 console.log(data, commandLineArgs)
