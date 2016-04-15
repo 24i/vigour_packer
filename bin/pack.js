@@ -24,13 +24,12 @@ let defaultOutputPath = path.join(process.cwd(), 'packedFake')
 let data = {
 	packer: {
     "chromecast" : {
-      "receiver.js": "platform/chromecast/receiver.js"
+      "receiver": "platform/chromecast/receiver.js"
     }
   }
 
 }
 
-console.log(data, commandLineArgs)
 
 let pack = Pack(data, commandLineArgs)
 pack.run()
