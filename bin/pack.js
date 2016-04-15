@@ -6,16 +6,11 @@ let path = require('path')
 let Pack = require('../lib')
 let supportedPlatforms = {
 	chromecast:'tv',
-	webostv:'tv',
 	web:'main'
 }
 let config = new Config()
 
 let commandLineArgs = []
-
-// 1st = Platform
-// 2nd = EntryPoint folder
-// 3rd = Output folder
 
 commandLineArgs.push(supportedPlatforms[process.argv[2]], process.argv[2])
 
