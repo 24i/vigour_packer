@@ -4,11 +4,10 @@
   "description": "Vigour Packer tool",
   "main": "index.js",
   "scripts": {
-    "test": "node --harmony test/pack/index.js",
-    "pack": "node lib"
+    "test": "node --harmony test/pack/index.js"
   },
   "bin": {
-    "packer": "bin/pack.js"
+    "pack": "bin/pack.js"
   },
   "repository": {
     "type": "git",

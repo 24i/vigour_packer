@@ -17,10 +17,11 @@ let commandLineArgs = []
 // 2nd = EntryPoint folder
 // 3rd = Output folder
 
-commandLineArgs.push(supportedPlatforms[process.argv[3]], process.argv[3])
+commandLineArgs.push(supportedPlatforms[process.argv[2]], process.argv[2])
 
 
-let defaultOutputPath = path.join(process.cwd(), 'packedFake')
+let defaultOutputPath = path.join(process.cwd(), 'fakeFolder')
+let defaultInputPath = path.join(process.cwd(), 'differentEntry')
 let data = {
 	packer: {
     "chromecast" : {
