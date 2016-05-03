@@ -37,5 +37,12 @@
     "sinon": "^1.17.3",
     "tape": "^4.5.1",
     "tape-promise": "^1.1.0"
+  },
+  "vigour":{
+    "files": {
+      "buildjs":"true",
+      "buildcss":"true",
+      "assets":"true"
+    }
   }
 }

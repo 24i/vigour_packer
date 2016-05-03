@@ -3,17 +3,10 @@
 
 let Config = require('vigour-config')
 let path = require('path')
-let Pack = require('../lib')
-let supportedPlatforms = {
-	chromecast:'tv',
-	web:'main'
-}
+let selected = process.argv[2]
+let Packer = require('../lib/pack/'.concat(selected))
+
 let config = new Config()
-
-let commandLineArgs = []
-
-commandLineArgs.push(supportedPlatforms[process.argv[2]], process.argv[2])
-
 
 let defaultOutputPath = path.join(process.cwd(), 'fakeFolder')
 let defaultInputPath = path.join(process.cwd(), 'differentEntry')
@@ -28,5 +21,6 @@ let data = {
 
 }
 
-let pack = Pack(data, commandLineArgs)
-pack.run()
+
+let test = Packer(data, selected)
+test.run()
